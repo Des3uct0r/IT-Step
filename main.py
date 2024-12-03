@@ -1,15 +1,25 @@
-
-class Cat :
-    def __init__(self, name , age, color, eyec) :
+class Human:
+    def __init__(self,name):
         self.name = name
-        self.age = age
-        self.color = color
-        self.eyec = eyec
-        print("Nice, your cat is ",self.name, " he is ", self.age, " years old, his color is ", self.color, " and his eyes color is ", self.eyec  )
+class Car:
+    def __init__(self,brand):
+        self.brand = brand
+        self.passangers = []
+    def add_pas(self,*args):
+        for pas in args:
+            self.passangers.append(pas)
+    def p_p_n(self):
+        if self.passangers != []:
+            print(f'Name of {self.brand} passangers:')
+            for pas in self.passangers:
+                print(pas.name)
+        else:
+            print(f"There are no passangers in {self.brand}")
+gordon = Human("Gordon")
+Jake = Human("Jake")
+alyx = Human("Alyx")
+dr_cliener = Human("Doctor Cliener")
+car = Car("Lanos")
 
-cname = str(input("What is name of the cat?"))
-cage = int(input("What age is cats age?"))
-ccolor = str(input("What is color of cat? "))
-ceyec = str(input("What is color of cats eyes?"))
-
-ccat = Cat(name = cname , age = cage , color = ccolor , eyec = ceyec)
+car.add_pas(alyx, gordon , Jake, dr_cliener)
+car.p_p_n()

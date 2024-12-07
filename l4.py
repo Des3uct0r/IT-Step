@@ -114,4 +114,5 @@ class Book(Page, Plot):
 book = Book(100, "Lorem Ipsum")
 book.describe()
 book.read(70)
+# r
 

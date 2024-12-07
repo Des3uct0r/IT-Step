@@ -94,7 +94,7 @@ car_brands = {
     "Ferrari": {"gas": 80, "condition": 110, "consumption": 14}
 }
 
-human = Human(name="Alex")
+human = Human(name="Sviat")
 human.get_job(job_offers)
 human.work()
 human.chill()
@@ -103,3 +103,4 @@ human.get_car(car_brands)
 human.drive()
 human.refuel()
 human.repair_car()
+#

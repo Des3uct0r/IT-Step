@@ -110,7 +110,7 @@ class Book(Page, Plot):
         print(f"Reading {pages} page(s)...")
         self.show_summary()
 
-# Example usage
+
 book = Book(100, "Lorem Ipsum")
 book.describe()
 book.read(70)

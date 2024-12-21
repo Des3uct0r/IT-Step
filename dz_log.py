@@ -38,6 +38,7 @@ def square(x):
 
 
 
+
 print(c(3, 4))
 print(d(10, 2))
 print(fail(5))

@@ -1,20 +1,18 @@
 import requests
 
 
-def get_rate():
+def get_rate(aud):
+    aud_amount = float(input("Enter the amount of AUD: "))
     url = 'https://bank.gov.ua/ua/markets/exchangerates'
-    try:
-        r = requests.get(url)
-        t = r.text.split("<td")
-        rates = []
-        for p in t:
-            if 'data-label="Офіційний курс"' in p:
-                rates.append(p.split(">")[1].split("<")[0])
-        if not rates:
-            return "Error: Rate not found."
-        return f"UAH to USD rate: {rates[0]} UAH per 1 USD."
-    except Exception as e:
-        return f"Error: {e}"
+    r = requests.get(url)
+    t = r.text.split("<td")
+    rates = []
+    for p in t:
+        if 'data-label="Офіційний курс"' in p:
+            rates.append(p.split(">")[1].split("<")[0])
+    return f"UAH to AUD : {rates[0]} UAH per {aud_amount} AUD."
+
+
 
 
 print(get_rate())
